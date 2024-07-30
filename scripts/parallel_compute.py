@@ -1,7 +1,7 @@
-import modal
+from modal import App
 
 
-app = modal.App("example-hello-world")
+app = App("example-hello-world")
 
 
 @app.function()
@@ -20,10 +20,11 @@ def main():
     # print(my_func.remote(1000))
 
     # run the function in parallel and remotely on Modal
-    end_value = 20
-
+    num_parallel_containers = 5
     total = 0
-    for result in my_func.map(range(end_value)):
+    for result in my_func.map(range(num_parallel_containers)):
         total += result
 
-    print(f" Total of square numbers between 0 and {end_value}: {total}")
+    print(
+        f"Total of square numbers between 0 and {num_parallel_containers} is: {total}"
+    )
