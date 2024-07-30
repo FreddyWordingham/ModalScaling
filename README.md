@@ -36,8 +36,10 @@ Run the web endpoints example:
 poetry run modal serve scripts/web_endpoints.py
 ```
 
+> Note: You'll need to note down the generated endpoint URL.
+
 You can then trigger the endpoints using `Curl`:
 
 ```bash
-curl https://freddywordingham--scripts-web-endpoints-py-f-dev.modal.run
+curl -X POST -H 'Content-Type: application/json' --data-binary '{"x": 2}' https://freddywordingham--scripts-web-endpoints-py-square-dev.modal.run
 ```
