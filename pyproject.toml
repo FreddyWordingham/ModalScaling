@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "modal-scaling"
+version = "0.0.0"
+description = "Testing the Modal service for scalability and elasticity"
+authors = ["Freddy Wordingham <freddy@digilab.co.uk>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+modal = "^0.63.94"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
